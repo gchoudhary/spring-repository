@@ -1,0 +1,15 @@
+spring:
+  application:
+     name: microservice-client  # Service registers under this name
+
+# HTTP Server
+server:
+  port: 3333   # HTTP (Tomcat) port
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
